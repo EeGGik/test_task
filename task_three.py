@@ -6,7 +6,7 @@ def merge_gen(*item):
     :param item:
     :return:
     """
-    indexes = [0 for _ in range(len(item))]
+    indexes = [ 0 if item[i] != None else None for i in range(len(item))]
     rez = [None for _ in range(len(indexes))]
     while rez != indexes:
         min = None
